@@ -1,5 +1,6 @@
 from button.class_button import Button
 from button import settings
+from paths import play_button_path
 
 
 dict_buttons = {
@@ -10,25 +11,17 @@ dict_buttons = {
     'Exit': None
 }
 
-# dict_buttons['Play'] = Button(x=settings.x,
-#                               y=settings.y,
-#                               width=settings.width,
-#                               height=settings.height,
-#                               image_path=r"C:\Users\home\Desktop\Python\Игра\images\menu\play.png"
-#                               )
-
-# count = 1
-
 temp_y = settings.y
 for button_name in dict_buttons.keys():
     dict_buttons[button_name] = Button(x=settings.x,
                                        y=temp_y,
                                        width=settings.width,
                                        height=settings.height,
-                                       image_path=r"C:\Users\home\Desktop\Python\Игра\images\menu\play.png"
+                                       image_path=play_button_path
                                        )
     temp_y += settings.height + settings.spacing
     # count += 1                          
 
-print(dict_buttons['Play'].rect.bottom)
-print(800 - dict_buttons['Exit'].rect.y)
+
+# print(dict_buttons['Play'].rect.bottom)
+# print(800 - dict_buttons['Exit'].rect.y)
